@@ -11,6 +11,10 @@ div{
     margin: 0;
 }
 
+input[type='button']{
+    width: 30px;
+}
+
 #page{
     background-color: grey;
     margin: 0 auto;
