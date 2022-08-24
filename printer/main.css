@@ -1,0 +1,27 @@
+body{
+    margin: 0;
+}
+
+h1{
+    margin: 0;
+}
+
+div{
+    margin: 0;
+}
+
+input, textarea[type='button']{
+    display: block;
+    margin 5px
+}
+
+#page{
+    background-color: grey;
+    margin: 0 auto;
+    width: 960px;
+};
+
+#subTitle
+{
+    margin: 0;
+}
