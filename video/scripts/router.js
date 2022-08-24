@@ -13,7 +13,8 @@ class Router {
         }
     }
 
-    #resolveRoute() {
+    #resolveRoute() 
+    {
         const handler = this.routes[this.#getPath()];
         handler?.();
     }
