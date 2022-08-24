@@ -1,28 +1,25 @@
 class Router {
     use(routes) {
-        console.log({ routes });
-        resolveRoute();
-        window.addEventListener("hashchange", () => {
-            resolveRoute();
-        });
-
-        function getPath() {
-            const path = location.hash.slice(1);
-            if (path === '') {
-                return '/';
-            }
-            else {
-                return path;
-            }
+        this.routes = routes;
+    }
+    
+    #getPath() {
+        const path = location.hash.slice(1);
+        if (path === '') {
+            return '/';
         }
-
-        function resolveRoute() {
-
-            const handler = routes[getPath()];
-            handler?.();
+        else {
+            return path;
         }
     }
-    start() {
 
+    #resolveRoute() {
+        const handler = this.routes[this.#getPath()];
+        handler?.();
+    }
+    
+    start() {
+        this.#resolveRoute();
+        window.addEventListener("hashchange", this.#resolveRoute);
     }
 }

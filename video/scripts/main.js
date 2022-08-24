@@ -17,7 +17,7 @@
 
 function fetchVideos() {
     //   console.log("fetchVideos");
-    const url = "http://fakes.herokuapp.com/videos";
+    const url = "https://fakes.herokuapp.com/videos";
     return fetch(url)
         .then(function (response) {
             //   console.log("fetchVideos, then", response);
